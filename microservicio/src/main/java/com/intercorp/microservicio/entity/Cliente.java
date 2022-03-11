@@ -1,5 +1,7 @@
 package com.intercorp.microservicio.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -36,5 +38,5 @@ public class Cliente {
 	private Integer edad;
 	
 	@Column(name = "FEC_NAC")
-	private String fechaNacimiento;
+	private Date fechaNacimiento;
 }

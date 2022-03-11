@@ -1,5 +1,8 @@
 package com.intercorp.microservicio.dto;
 
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -21,8 +24,10 @@ public class ClienteDTO {
 	private Integer edad;
 	
 	@JsonProperty("fechaNacimiento")
-	private String fechaNacimiento;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
+	private Date fechaNacimiento;
 	
 	@JsonProperty("fechaProbMuerte")
-	private String fechaProbMuerte;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
+	private Date fechaProbMuerte;
 }

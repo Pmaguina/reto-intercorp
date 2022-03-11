@@ -1,15 +1,12 @@
 package com.intercorp.microservicio.config;
 
-import java.util.Arrays;
 import java.util.Collections;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import springfox.documentation.builders.ParameterBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.schema.ModelRef;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
@@ -33,11 +30,11 @@ public class SwaggerConfig {
 	
 	private ApiInfo getApiInfo() {
 		return new ApiInfo(
-				"Order Service API",
-				"Order Service API Description",
+				"Cliente Service API",
+				"Esta API permite realizar la creación de clientes, consulta de indicadores y listado de clientes",
 				"1.0",
-				"http://codmind.com/terms",
-				new Contact("Codmind", "https://codmind.com", "apis@codmind.com"),
+				"http://intercorp.com/terms",
+				new Contact("Intercorp", "https://intercorp.com", "apis@intercorp.com"),
 				"LICENSE",
 				"LICENSE URL",
 				Collections.emptyList()
